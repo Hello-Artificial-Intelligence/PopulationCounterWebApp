@@ -1,0 +1,47 @@
+﻿@page
+@model PopulationCounterWebApp.Pages.ContactModel
+@{
+}
+<h3>CONTACT FORM</h3>
+<p>
+    THIS FOR DEMO WEB APP.
+</p>
+<hr />
+@if (Model.hasData)
+{
+    <p>HELLO @Model.name </p>
+    <p><b>We received your following message correctly:</b></p>
+    <p>@Model.message</p>
+    <p><b>WE WILL CONTACT YOU THROUGH EMAIL ID. Stay save and healthy :)</b></p>
+
+    <hr />
+}
+
+<div class="container">
+    <form method="POST">
+        <div class="row">
+            <label class="required" for="name"><b> Your name : </b></label>
+            <br />
+            <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+            <span id="name_validation" class="error_message"></span>
+        </div>
+        <hr />
+        <div class="row">
+            <label class="required" for="email"><b> Your email : </b></label>
+            <br />
+            <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+            <span id="email_validation" class="error_message"></span>
+        </div>
+        
+        <hr />
+        <div class="row">
+            <label class="required" for="message"><b> Your message : </b></label>
+            <br />
+            <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+            <span id="message_validation" class="error_message"></span>
+        </div>
+        <br />
+        <input id="submit_button" type="submit" value="Send email" />
+    </form>
+</div>
+
