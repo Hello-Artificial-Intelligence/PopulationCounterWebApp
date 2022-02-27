@@ -1,0 +1,129 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4"><b>POPULATION COUNT </b></h1>
+    <p><b>Government of India</b></p>
+</div>
+<hr />
+
+@if (Model.hasVerify)
+{
+    <p>HELLO @Model.name </p>
+    <h4><p><b>your id is verified</b></p></h4>
+}
+
+@if (Model.hasData)
+{
+    <h5><p><b>your data has been submitted correctly :)</b></p></h5>
+    <hr />
+}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    .content form .user-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+    }
+
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+    }
+
+    form .input-box span.details {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .user-details .input-box input {
+        height: 45px;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+    }
+</style>
+<body>
+    <div class="container">
+        <form method="POST">
+            <div class="content">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details"><b>Full Name :</b></span>
+                        <input id="name" type="text" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><b>Fathername :</b></span>
+                        <input id="fathername" type="text" placeholder="Enter your fathername" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><b>Mothername :</b></span>
+                        <input id="mothername" type="text" placeholder="Enter your mothername" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><b>Age :</b></span>
+                        <input id="age" type="text" placeholder="Enter your age" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><b>Religion :</b></span>
+                        <input id="religion" type="text" placeholder="Enter your religion" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><b>Email :</b></span>
+                        <input id="email" type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><b>Phone Number :</b></span>
+                        <input id="phonenumber" type="text" placeholder="Enter your number" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><b>State :</b></span>
+                        <input id="state" text" placeholder="Enter your state" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><b>City :</b></span>
+                        <input id="city" type="text" placeholder="Confirm your city" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><b>House :</b></span>
+                        <input id="house" type="text" placeholder="House number or street" required>
+                    </div>
+                    <hr />
+                    <p><b>ID VARIFICATION</b></p>
+                    <p>Varification id means enter your adhar number, pan number, voter id number, driving licence and etc</p>
+                    <div class="input-box">
+                        <span class="details"><b>VarificationId :</b></span>
+                        <input id="varificationid" type="text" placeholder="varification id number" required>
+                        <div class="Vbutton">
+                            <input id="submit_vbutton" type="submit" value="Verify">
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="button">
+                    <input id="submit_button" type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
+
